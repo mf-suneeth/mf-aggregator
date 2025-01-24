@@ -105,6 +105,7 @@ function Schedule() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [existingMonths, setExistingMonths] = useState(null);
+  const [existingMonthsData, setExistingMonthsData] = useState(null);
   const [goals, setGoals] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -289,7 +290,7 @@ function Schedule() {
   };
 
   return (
-    <div className="component-wrapper" style={{ padding: "4rem 5vw", backgroundColor: "#FFF",  height: "100%", flex: 1}}>
+    <div className="component-wrapper" style={{ padding: "4rem 5vw", backgroundColor: "#FFF",  height: "100vh", flex: 1}}>
       <div className="" style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "2.5rem", flexDirection: "row" }}>
         <div className="enter-date" style={style_category_dialog}>
           <div className="tab-header" style={style_tab_header}>
@@ -315,11 +316,13 @@ function Schedule() {
                       }}
                       onMouseEnter={(e) => { e.target.style.transform = "scale(1.05)"; }}
                       onMouseLeave={(e) => { e.target.style.transform = "scale(1)"; }}
-                      onClick={() =>
+                      onClick={() => (
                         handleMonthSelect(
                           existingMonths.data[month].month,
                           existingMonths.data[month].year
                         )
+
+                      )
                       }
                     >
                       <div style={{ fontSize: "0.9rem", color: "#3B82F6E2", fontWeight: "700", letterSpacing: "0.5px" }}>

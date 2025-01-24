@@ -3,7 +3,6 @@ export const page_root = {
     padding: "5vw",
     color: "#000000",
     backgroundColor: "#FFFFFF",
-    height: "100rem",
 }
 
 export const view_button = {

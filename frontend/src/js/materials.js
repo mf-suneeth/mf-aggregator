@@ -25,9 +25,9 @@ export const materialColor = {
     "HTS" : "#DA291C",
     "PFR" : "#FFFFFF",
     "RDM" : "#FFFFFF",
-    "RDP" : "#FFFFFF",
+    "RDP" : "#cccccc",
     "VGA" : "#2E2259",
-    "T64" : "#FFFFFF",
+    "T64" : "#cccccc",
   };
 
  export const materialDict = {
